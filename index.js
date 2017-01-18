@@ -1,4 +1,3 @@
-
 var colors = new Array(
   [62,35,255],
   [60,255,60],
@@ -60,7 +59,7 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 
 setInterval(updateGradient,10);
 var getData = (function($){
-	var URL = "https://api.github.com/repos/KJSCE-Codecell/kjsce-codecell.github.io/commits"
+	var URL = "https://api.github.com/repos/KJSCE-Codecell/Developers/commits"
 	$.get(URL,function(data,status){
 			console.log(data);
 			var img;
