@@ -1,5 +1,5 @@
 var getData = (function($){
-	var URL = "https://api.github.com/repos/KJSCE-Codecell/Contributions/commits"
+	var URL = "https://api.github.com/repos/KJSCE-Codecell/kjsce-codecell.github.io/commits"
 	$.get(URL,function(data,status){
 			console.log(data);
 			var img;
@@ -27,7 +27,7 @@ var getData = (function($){
 				}
 				var date = d.commit.committer.date;
 
-				if(mes=="Initial commit" && author.login == "vedipen") {
+				if(mes=="Initial commit") {
 					return true;
 				}		
 				console.log(date);
