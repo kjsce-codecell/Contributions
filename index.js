@@ -1,5 +1,5 @@
 var getData = (function($){
-	var URL = "https://api.github.com/repos/KJSCE-Codecell/kjsce-codecell.github.io/commits"
+	var URL = "https://api.github.com/repos/KJSCE-Codecell/developers/commits"
 	$.get(URL,function(data,status){
 			console.log(data);
 			var img;
@@ -14,7 +14,7 @@ var getData = (function($){
 			var caption_a = "</div></div>";
 			var h2_b = " <strong> by "
 			var h2_a = "</strong>"
-			var commit_message_b = "<p> Commit Message: ";
+			var commit_message_b = "<p> Name: ";
 			var commit_message_a = "</p>";
 			//console.log(template)
 			data.forEach(function(d){
