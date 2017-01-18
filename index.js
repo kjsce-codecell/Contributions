@@ -12,9 +12,9 @@ var getData = (function($){
 			var container_a = "</div>";	
 			var caption_b =  "<div class='caption'>";
 			var caption_a = "</div></div>";
-			var h2_b = " <strong> by "
+			var h2_b = " <strong>"
 			var h2_a = "</strong>"
-			var commit_message_b = "<p> Name: ";
+			var commit_message_b = "<p>";
 			var commit_message_a = "</p>";
 			//console.log(template)
 			data.forEach(function(d){
@@ -22,6 +22,9 @@ var getData = (function($){
 				//console.log(d.commit.message);
 				var mes = d.commit.message;
 				var date = d.commit.committer.date;
+				if(mes=="Initial commit") {
+					return true;
+				}	
 				console.log(date);
 				// img = "<img src=" + author.avatar_url + "/>  <h2>" +author.login +"</h2> <h3>"+mes+"</h3>"
 				var template = 
