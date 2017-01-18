@@ -1,5 +1,5 @@
 var getData = (function($){
-	var URL = "https://api.github.com/repos/KJSCE-Codecell/developers/commits"
+	var URL = "https://api.github.com/repos/KJSCE-Codecell/Contributions/commits"
 	$.get(URL,function(data,status){
 			console.log(data);
 			var img;
