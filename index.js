@@ -59,7 +59,7 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 
 setInterval(updateGradient,10);
 var getData = (function($){
-	var URL = "https://api.github.com/repos/KJSCE-Codecell/Developers/commits"
+	var URL = "https://api.github.com/repos/KJSCE-Codecell/Developers/commits?per_page=100"
 	$.get(URL,function(data,status){
 			console.log(data);
 			var img;
@@ -79,6 +79,9 @@ var getData = (function($){
 			//console.log(template)
 			data.forEach(function(d){
 				author = d.author;
+				if(author==null){
+					return true;
+				}
 				//console.log(d.commit.message);
 				var mes = d.commit.message;
 				var name = d.commit.author.name;
